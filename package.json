@@ -1,7 +1,7 @@
 {
   "name": "ts_sort",
   "version": "1.0.0",
-  "description": "",
+  "description": "Typescript sorting library",
   "main": "lib/index",
   "types": "lib/index",
   "scripts": {
@@ -10,8 +10,12 @@
     "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "typescript",
+    "sort",
+    "algorithm"
+  ],
+  "author": "@zero0rder",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.4.1",
