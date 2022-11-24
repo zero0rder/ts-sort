@@ -1,28 +1,41 @@
 /**
  *      Selection Sort Algorithm - O(n^2)
  */
-function findSmallestIndex(array: number[]): number {
-    let smallestNumber = array[0];
-    let smallestIndex = 0;
 
-    for (let i = 0; i < array.length; i++){
-        if (smallestNumber > array[i]) {
-            smallestNumber = array[i];
-            smallestIndex = i;
+function findSmallestIndex(a: number[]): number {
+    let smallestNumber = a[0], smallestIndex = 0
+
+    for (let i = 0; i < a.length; i++){
+        if (smallestNumber > a[i]) {
+            smallestNumber = a[i]
+            smallestIndex = i
         }
     }
     
-    return smallestIndex;
+    return smallestIndex
 }
 
-
-export function ssort(array: number[]): number[]{
-    let _sortedArray: number[] = [];
-
-    while (array.length > 0) {
-        let index = findSmallestIndex(array);
-        _sortedArray.push(array.splice(index, 1)[0]);
+//-> O(n) - Space
+export function ssort(a: number[]): number[]{
+    let _sortedA: number[] = []
+    
+    while (a.length > 0) {
+        _sortedA.push(a.splice(findSmallestIndex(a), 1)[0])
     }
 
-    return _sortedArray;
+    return _sortedA
+}
+
+//-> O(1) - Space
+export function ssortInplace(a: number[]): number[]{
+    for(let i = 0; i < a.length - 1; i++){
+        let j = i + 1
+
+        while (j < a.length) {
+            if(a[i] > a[j]){[a[i], a[j]] = [a[j], a[i]]}
+            j++
+        }
+    }
+
+    return a
 }
