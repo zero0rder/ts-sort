@@ -1,4 +1,4 @@
-# ts-sort ![npm](https://img.shields.io/npm/v/ts-sort)
+# ts-sort ![npm](https://img.shields.io/npm/v/ts-sort) ![npm](https://img.shields.io/npm/dw/ts-sort)
 
 ## Sorting Utilities for your organizing needs! 🦾
 
