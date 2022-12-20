@@ -13,7 +13,9 @@
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint"
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
   "keywords": [
     "typescript",
@@ -22,6 +24,7 @@
   ],
   "author": "Dwight Smith",
   "license": "ISC",
+  "repository": "https://github.com/zero0rder/ts-sort",
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.23",
