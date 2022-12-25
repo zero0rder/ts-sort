@@ -23,7 +23,7 @@
     "algorithm"
   ],
   "author": "Dwight Smith",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "https://github.com/zero0rder/ts-sort",
   "devDependencies": {
     "@types/jest": "^27.4.1",
